@@ -9,6 +9,7 @@ detector = Detector()
 
 @app.post('/detect_image')
 async def detect_image(file: UploadFile = File(...)):
+    print('uploaded')
     result = detector.detect(file)
     return {'bb_box': result.tolist()}
     # try:

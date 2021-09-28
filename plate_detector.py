@@ -14,9 +14,11 @@ class Detector:
     def detect(self, file):
         image = np.asarray(bytearray(file.file.read()), dtype="uint8")
         image = cv2.imdecode(image, flags=cv2.IMREAD_COLOR)
+        print('decoded')
         image = cv2.resize(image, (self._IMAGE_SIZE, self._IMAGE_SIZE))
         image = np.array(image)
         image = image / 255.0
         image = np.expand_dims(image, axis=0)
         p = self._model.predict(image)
+        print('predicted')
         return p[0] * 255
