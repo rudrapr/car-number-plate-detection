@@ -21,7 +21,6 @@ idna==3.2
 keras==2.6.0
 Keras-Preprocessing==1.1.2
 Markdown==3.3.4
-numpy==1.21.2
 oauthlib==3.1.1
 opencv-python-headless==4.5.3.56
 opt-einsum==3.3.0
